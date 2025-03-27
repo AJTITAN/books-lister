@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Search Area -->
+        <div class="search-area">
+            <input type="text" placeholder="Search here..." class="input-search" aria-label="Search articles">
+            <button class="search-btn">Search</button>
+        </div>
+
+        <!-- Sorting & View Controls -->
+        <div class="sort-view-area">
+            <button class="list-view" aria-label="List View">
+                <i class="fa fa-bars"></i> <span>List</span>
+            </button>
+            <button class="grid-view" aria-label="Grid View">
+                <i class="fa fa-th-large"></i> <span>Grid</span>
+            </button>
+        </div>
+
+        <!-- Content Area -->
+        <div id="content-display-area" class="content-display-area"></div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button id="prev-btn" class="prev-btn" aria-label="Previous Page">Previous</button>
+            <span id="page-numbers">Page 1</span>
+            <button id="next-btn" class="next-btn" aria-label="Next Page">Next</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

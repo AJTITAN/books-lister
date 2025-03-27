@@ -1,0 +1,256 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+/*Search Area */
+.search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.input-search {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-search:focus {
+    border-color: #007bff;
+}
+
+/* Search Button */
+.search-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sorting & View Controls */
+.sort-view-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+}
+
+/* List & Grid Buttons */
+.list-view, .grid-view {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.list-view:hover, .grid-view:hover {
+    background-color: #f1f1f1;
+}
+
+.list-view[aria-pressed="true"], 
+.grid-view[aria-pressed="true"] {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+/* Content Area */
+.content-display-area {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+    cursor: pointer;
+    background: #fff;
+    box-shadow: rgb(38, 57, 77) 0px 10px 20px -5px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: rgb(38, 57, 77) 0px 15px 25px -5px;
+}
+
+/* Image Section */
+.image-section {
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Text Styling */
+.text-area {
+    text-align: center;
+    font-family: 'Lora', serif;
+    padding-top: 10px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.publisher-name {
+    font-family: 'Playfair Display', serif;
+    color: #797676;
+    font-size: 14px;
+}
+
+.published-date,
+.vauthors {
+    font-size: 14px;
+    color: #555;
+}
+
+/* List View Styling */
+.list-view .card {
+    width: 800px;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Grid View Styling */
+.grid-view .card {
+    width: 360px;
+    flex-direction: column;
+}
+
+/* Pagination Buttons */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.pagination button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+/* Sorting Dropdown */
+.sort-select {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Grid & List View Styling */
+.grid-view-mode {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.list-view-mode {
+    display: block;
+}
+
+
+
+ /* for mobile devices */
+@media (max-width: 768px) {
+    .content-display-area {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%; 
+      flex-direction: column; 
+      gap: 10px;
+      justify-content: center;
+    }
+  
+    .image-section img {
+      width: 100%; 
+      height: auto;
+    }
+  
+    .text-area {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .input-search {
+      width: 80%;
+    }
+  
+    .prev-btn, .next-btn {
+      width: 100px; 
+    }
+  }
+  
