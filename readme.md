@@ -1,4 +1,4 @@
-# Daily Mood Tracker
+# Daily Book Tracker
 
 ## Application Features
 
